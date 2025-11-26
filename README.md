@@ -46,5 +46,5 @@ Git init - This command initializes Git functionality in your working directory
 The Git push command is the first one you will want to run, effectively placing your new branch on the remote repository:
     #git push origin staging
 --Then, while the branch is still checked out, you can set it an “upstream” branch for it, which means the local branch will be tracking its remote counterpart for changes instead of the master branch:
-  ## git push origin -u staging
+   git push origin -u staging
   
