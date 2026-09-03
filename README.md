@@ -11,13 +11,13 @@ Git init - This command initializes Git functionality in your working directory
  - Otherwise, Git will not know what name and email to sign on your commits
  - Git keeps great records, and that part of that process involves knowing who is contributing what.
           - git config --global user.name "Joe Example"
-          - git config --global user.email joe@example.com
+          - git config --global user.email "joe@example.com"
    
 ##The Staging Index
    -You will constantly find yourself adding files to the staging index in Git.
    -You will be both adding new files for tracking and adding modifications to files that are already being tracked.
    - To add a new file for tracking, use the “add” command followed by the name of the file
-       # git add file.txt "this is for adding files by their names"
+       # git add "file.txt" - "this is for adding files by their names"
 -There will likely be occasions in which you will want to add the full contents of a sub-directory to the staging index.
        # git add assets/*
 - You can also add the entire contents of your working directory to staging with the “add” command followed by the -A option.
