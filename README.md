@@ -1,50 +1,112 @@
-# introductionto_github_taitataveta_GDG
+# Introduction to GitHub: Taita Taveta GDG
 
-##Initialize Repository
-Git init - This command initializes Git functionality in your working directory
-         - This “hidden” directory keeps track of the files and special reference markers needed by the Git program
+## Initialize a Repository
 
-##Configure Your Git User
-##Initialize Repository
- -You will first want to make sure that you have added a username to your Git installation
- - This is done on the local workstation.
- - Otherwise, Git will not know what name and email to sign on your commits
- - Git keeps great records, and that part of that process involves knowing who is contributing what.
-          - git config --global user.name "Joe Example"
-          - git config --global user.email "joe@example.com"
-   
-##The Staging Index
-   -You will constantly find yourself adding files to the staging index in Git.
-   -You will be both adding new files for tracking and adding modifications to files that are already being tracked.
-   - To add a new file for tracking, use the “add” command followed by the name of the file
-       # git add "file.txt" - "this is for adding files by their names"
--There will likely be occasions in which you will want to add the full contents of a sub-directory to the staging index.
-       # git add assets/*
-- You can also add the entire contents of your working directory to staging with the “add” command followed by the -A option.
-       # git add -A
-- If you have already added files to tracking and only want to record modifications without adding new files, you can use the “add” command followed by the . option.
-     # git add .
-##Checking the Status of Your Files
-- This can tell you which files are being tracked, not tracked, or modified.
-  # git status
-##Commit Changes in Git
--Committing tracked files to the repository means that we are adding changes to the permanent record of the project.
-#To commit the changes you’ve made, you will only need to run a simple command in your terminal.
-   #git commit -m "Added new test feature"
-### Automatically Adding Changes
-- git add .
-- git commit -am "Added new test feature"
-- git push origin -u master
+- Run `git init` to initialize Git in your working directory.
+- Git creates a hidden directory that stores:
+  - The information needed to track your files.
+  - Special references used to manage the repository.
 
+## Configure Your Git User
 
-####Create a New Branch Locally
-- To create a new local branch and switch to it, you can use the checkout command. For this example, we will presume you want to name the new branch “staging”
-  ##git checkout -b staging
-- You now have a new branch called “staging” and you can view all branches with the git branch command as below:
-  ##git branch
-###Push New Branch To Remote and Set as Upstream
-The Git push command is the first one you will want to run, effectively placing your new branch on the remote repository:
-    #git push origin staging
---Then, while the branch is still checked out, you can set it an “upstream” branch for it, which means the local branch will be tracking its remote counterpart for changes instead of the master branch:
-   git push origin -u staging
-  
+- Add your name and email address to your Git installation.
+- This configuration is saved on your local workstation.
+- Git uses these details to identify who created each commit.
+- Configure your details with:
+
+  ```bash
+  git config --global user.name "Joe Example"
+  git config --global user.email "joe@example.com"
+  ```
+
+## Use the Staging Index
+
+- Add a specific file to the staging index:
+
+  ```bash
+  git add file.txt
+  ```
+
+- Add all files from a subdirectory:
+
+  ```bash
+  git add assets/*
+  ```
+
+- Add all changes in the working directory:
+
+  ```bash
+  git add -A
+  ```
+
+- Add new and modified files from the current directory:
+
+  ```bash
+  git add .
+  ```
+
+## Check the Status of Your Files
+
+- Use `git status` to see which files are:
+  - Tracked.
+  - Untracked.
+  - Modified.
+  - Staged for a commit.
+
+  ```bash
+  git status
+  ```
+
+## Commit Changes
+
+- A commit adds staged changes to the permanent history of the project.
+- Commit your staged changes with a short, descriptive message:
+
+  ```bash
+  git commit -m "Added new test feature"
+  ```
+
+### Stage and Commit Tracked Files Automatically
+
+- Use the `-a` option to stage changes to files that Git already tracks and commit them.
+- New, untracked files must still be added with `git add` first.
+
+  ```bash
+  git commit -am "Added new test feature"
+  ```
+
+- Push the branch to the remote repository and set its upstream branch:
+
+  ```bash
+  git push -u origin master
+  ```
+
+## Create a New Local Branch
+
+- Create a branch named `staging` and switch to it:
+
+  ```bash
+  git checkout -b staging
+  ```
+
+- View all local branches:
+
+  ```bash
+  git branch
+  ```
+
+## Push a New Branch to the Remote Repository
+
+- Push the new `staging` branch to the remote repository:
+
+  ```bash
+  git push origin staging
+  ```
+
+- Set the remote `staging` branch as the upstream branch for your local branch:
+
+  ```bash
+  git push -u origin staging
+  ```
+
+- After setting the upstream branch, Git can track changes between the local and remote `staging` branches.
