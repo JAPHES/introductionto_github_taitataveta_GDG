@@ -1,5 +1,25 @@
 # Introduction to GitHub: Taita Taveta GDG
 
+## Git Bash and GitHub
+
+### What Is Git Bash?
+
+- Git Bash is a command-line application included with Git for Windows.
+- It allows Windows users to run Git commands and common Bash commands.
+- You can use it to create repositories, track changes, commit work, and connect local projects to GitHub.
+- Download and install [Git for Windows](https://gitforwindows.org/) to get Git Bash.
+
+### What Is GitHub?
+
+- GitHub is a web-based platform for storing Git repositories online.
+- It helps individuals and teams:
+  - Back up and share projects.
+  - Collaborate on code and other files.
+  - Track changes and manage different versions of a project.
+- GitHub does not need to be installed because you can use it in a web browser.
+- [Create a free GitHub account](https://github.com/signup) to get started.
+- If you prefer a graphical application, you can optionally [download GitHub Desktop](https://desktop.github.com/).
+
 ## Initialize a Repository
 
 - Run `git init` to initialize Git in your working directory.
